@@ -1,38 +1,94 @@
 {
-  "chirpi": {
-    "nom": "Chirpi",
-    "element": "Vent",
-    "role": "Support",
-    "niveau": "Lumin Stage",
-    "description": "Petit oiseau agile des zones verdoyantes."
-  },
-  "tromber": {
-    "nom": "Tromber",
-    "element": "Vent",
+  "budclaw": {
+    "nom": "Budclaw",
+    "element": "Herbe/Roche",
     "role": "BREAK",
-    "niveau": "Gamma Stage",
-    "description": "Spécialiste pour briser la jauge de défense adverse."
+    "niveau": "Lumin Stage",
+    "description": "Défensif et spécialisé dans l'accumulation de Momentum sur le rivage."
   },
-  "cornet": {
-    "nom": "Cornet",
-    "element": "Eau",
-    "role": "Support",
-    "niveau": "Base Form",
-    "description": "Créature aquatique polyvalente dotée de multiples formes."
-  },
-  "tubster": {
-    "nom": "Tubster",
+  "shelly": {
+    "nom": "Shelly",
     "element": "Eau",
     "role": "Tank",
-    "niveau": "Lumin Stage",
-    "description": "Un Aniimo robuste qui encaisse les coups avec aisance."
-  },
-  "otti": {
-    "nom": "Otti",
-    "element": "Eau",
-    "role": "DPS",
     "niveau": "Base Form",
-    "description": "Maître des combats rapprochés générant des dégâts continus."
+    "description": "Petite créature aquatique protégée par une coquille solide."
+  },
+  "sheldon": {
+    "nom": "Sheldon",
+    "element": "Eau",
+    "role": "Tank",
+    "niveau": "Gamma Stage",
+    "description": "Évolution intermédiaire encaissant les coups les plus rudes."
+  },
+  "sherro": {
+    "nom": "Sherro",
+    "element": "Eau",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Rempart massif protégeant toute l'équipe des assauts ennemis."
+  },
+  "pebbling": {
+    "nom": "Pebbling",
+    "element": "Terre",
+    "role": "BREAK",
+    "niveau": "Base Form",
+    "description": "Composé de cailloux assemblés, excelle pour briser les gardes."
+  },
+  "geodeback": {
+    "nom": "Geodeback",
+    "element": "Terre",
+    "role": "BREAK",
+    "niveau": "Gamma Stage",
+    "description": "Renferme des cristaux précieux sous sa carapace rocheuse."
+  },
+  "minespine": {
+    "nom": "Minespine",
+    "element": "Terre",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Hérissé de pointes minérales destructrices."
+  },
+  "pawney": {
+    "nom": "Pawney",
+    "element": "Dark",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Combattant blindé infligeant des dégâts accrus aux cibles sous contrôle."
+  },
+  "ignitis": {
+    "nom": "Ignitis",
+    "element": "Dark",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Assassin ténébreux spécialisé dans les frappes fulgurantes en embuscade."
+  },
+  "susuta": {
+    "nom": "Susuta",
+    "element": "Eau",
+    "role": "BREAK",
+    "niveau": "Lumin Stage",
+    "description": "Spécialiste de la rupture de jauge aux multiples embranchements."
+  },
+  "nimbi_base": {
+    "nom": "Nimbi",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Créature aérienne discrète qui s'enroule dans les nuages."
+  },
+  "nimbi_rainstorm": {
+    "nom": "Nimbi (Rainstorm)",
+    "element": "Eau/Vent",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Variante de tempête de pluie aux capacités de contrôle amplifiées."
+  },
+  "nimbi_cloudmist": {
+    "nom": "Nimbi (Cloudmist)",
+    "element": "Glace/Vent",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Variante brumeuse spécialisée dans l'absorption de dégâts."
   },
   "irisal": {
     "nom": "Irisal",
@@ -47,33 +103,5 @@
     "role": "Support",
     "niveau": "Gamma Stage",
     "description": "Émet des ondes apaisantes pour endormir ses rivaux en plein vol."
-  },
-  "rookey": {
-    "nom": "Rookey",
-    "element": "Roche/Acier",
-    "role": "Tank",
-    "niveau": "Base Form",
-    "description": "Une petite sentinelle blindée qui ne recule jamais."
-  },
-  "fennelun": {
-    "nom": "Fennelun",
-    "element": "Feu/Psy",
-    "role": "DPS",
-    "niveau": "Lumin Stage",
-    "description": "Esprit rusé manipulant des flammes illusoires."
-  },
-  "helion": {
-    "nom": "Helion",
-    "element": "Feu",
-    "role": "DPS",
-    "niveau": "Nova Stage",
-    "description": "Incarnation solaire pure, ses attaques embrasent tout sur leur passage."
-  },
-  "malevsera": {
-    "nom": "Malevsera",
-    "element": "Dark/Venin",
-    "role": "DPS",
-    "niveau": "Nova Stage",
-    "description": "Entité ténébreuse redoutée pour ses poisons mortels."
   }
 }
