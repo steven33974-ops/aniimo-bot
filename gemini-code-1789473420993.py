@@ -5,15 +5,8 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-# --- FICHIERS DE DONNÉES (Intégration de tous les fichiers 1 à 6) ---
-FICHIERS_ANIIMOS = [
-    "aniimos.json", 
-    "aniimos_2.json", 
-    "aniimos_3.json", 
-    "aniimos_4.json", 
-    "aniimos_5.json", 
-    "aniimos_6.json"
-]
+# --- FICHIERS DE DONNÉES (2 gros fichiers de ~25/30 Aniimos chacun) ---
+FICHIERS_ANIIMOS = ["aniimos.json", "aniimos_2.json"]
 INVENTORY_FILE = "inventaires.json"
 
 # Charger et fusionner automatiquement tous les fichiers de données
@@ -24,7 +17,7 @@ for file_path in FICHIERS_ANIIMOS:
             data = json.load(f)
             ANIIMOS_DATA.update(data)
     except FileNotFoundError:
-        pass # Ignore si un fichier n'est pas encore créé
+        pass
 
 def charger_inventaires():
     try:
