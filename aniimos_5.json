@@ -1,0 +1,37 @@
+{
+  "leafling": {
+    "nom": "Leafling",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Une fée des bois minuscule qui absorbe l'énergie solaire pour grandir."
+  },
+  "floraspark": {
+    "nom": "Floraspark",
+    "element": "Herbe/Électrique",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Ses fleurs émettent des spores lumineuses et des micro-décharges."
+  },
+  "voltmouse": {
+    "nom": "Voltmouse",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Stocke de l'électricité statique dans ses joues rebondies."
+  },
+  "thundermane": {
+    "nom": "Thundermane",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Chevauche les éclairs au cœur des orages les plus violents."
+  },
+  "spectril": {
+    "nom": "Spectril",
+    "element": "Psy/Spectre",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Flotte silencieusement entre les dimensions pour observer les voyageurs."
+  }
+}
