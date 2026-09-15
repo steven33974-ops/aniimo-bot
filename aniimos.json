@@ -70,3 +70,6 @@
     "description": "Un Aniimo robuste qui encaisse les coups avec aisance."
   }
 }
+import os
+
+bot.run(os.getenv("DISCORD_TOKEN"))
