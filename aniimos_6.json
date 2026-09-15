@@ -1,37 +1,212 @@
 {
-  "draconis_base": {
-    "nom": "Draconis",
-    "element": "Dragon",
+  "alpha_ember": {
+    "nom": "Alpha Ember",
+    "element": "Feu",
     "role": "DPS",
-    "niveau": "Base Form",
-    "description": "Un jeune dragon curieux rêvant de conquérir les cieux d'Idyll."
+    "niveau": "Lumin Stage",
+    "description": "Le chef de pack des plaines arides, toujours en quête de défis."
   },
-  "draconis_storm": {
-    "nom": "Draconis (Storm)",
-    "element": "Dragon/Vent",
+  "alpha_torrent": {
+    "nom": "Alpha Torrent",
+    "element": "Eau",
     "role": "DPS",
+    "niveau": "Lumin Stage",
+    "description": "Domine les cascades avec une maîtrise parfaite des flux."
+  },
+  "alpha_leaf": {
+    "nom": "Alpha Leaf",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Lumin Stage",
+    "description": "Protège farouchement son territoire boisé contre les menaces."
+  },
+  "omega_spark": {
+    "nom": "Omega Spark",
+    "element": "Électrique",
+    "role": "BREAK",
     "niveau": "Nova Stage",
-    "description": "Forme évoluée maîtrisant les tempêtes de haute altitude."
+    "description": "Un spécimen rare capable de court-circuiter n'importe quel système."
   },
-  "draconis_abyss": {
-    "nom": "Draconis (Abyss)",
-    "element": "Dragon/Dark",
-    "role": "DPS",
-    "niveau": "Nova Stage",
-    "description": "Variante ténébreuse redoutée des abysses souterrains."
-  },
-  "titanos": {
-    "nom": "Titanos",
-    "element": "Roche/Terre",
+  "omega_frost": {
+    "nom": "Omega Frost",
+    "element": "Glace",
     "role": "Tank",
     "niveau": "Nova Stage",
-    "description": "Un colosse ancestral dont le corps est constitué de monolithes sacrés."
+    "description": "Plonge instantanément le climat environnant en période glaciaire."
   },
-  "lumina": {
-    "nom": "Lumina",
-    "element": "Lumière",
+  "nova_flare": {
+    "nom": "Nova Flare",
+    "element": "Feu/Cosmic",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Libère l'énergie brute d'une étoile en train de s'embraser."
+  },
+  "nova_quake": {
+    "nom": "Nova Quake",
+    "element": "Terre/Roche",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Provoque des secousses sismiques ressenties à travers tout le continent."
+  },
+  "nova_storm": {
+    "nom": "Nova Storm",
+    "element": "Vent/Eau",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Un tyran météorologique qui contrôle la pluie et les éclairs."
+  },
+  "shadow_knight": {
+    "nom": "Shadow Knight",
+    "element": "Dark/Acier",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un chevalier maudit aux plaques d'armure forgées dans les ténèbres."
+  },
+  "radiant_paladin": {
+    "nom": "Radiant Paladin",
+    "element": "Lumière/Acier",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un champion de la lumière brandissant un bouclier d'énergie pure."
+  },
+  "abyssal_leviathan": {
+    "nom": "Abyssal Leviathan",
+    "element": "Eau/Spectre",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "La terreur des marins, surgissant des fosses océaniques les plus profondes."
+  },
+  "sky_emperor": {
+    "nom": "Sky Emperor",
+    "element": "Vent/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Le souverain suprême des nuages, vénéré par tous les types Vol."
+  },
+  "chrono_beast": {
+    "nom": "Chronobeast",
+    "element": "Cosmic/Psy",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Une créature énigmatique capable de plier légèrement l'écoulement du temps."
+  },
+  "venom_hydra": {
+    "nom": "Venomhydra",
+    "element": "Venin/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un dragon tricéphale crachant des torrents de venin corrosif."
+  },
+  "crystal_colossus": {
+    "nom": "Crystal Colossus",
+    "element": "Roche/Glace",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un géant étincelant façonné de quartz et de blocs de glace éternelle."
+  },
+  "nether_imp": {
+    "nom": "Netherimp",
+    "element": "Dark/Feu",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Un petit démon farceur qui s'amuse à allumer de petits feux de joie."
+  },
+  "nether_lord": {
+    "nom": "Netherlord",
+    "element": "Dark/Feu",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un seigneur des enfers capable de consumer les âmes de ses rivaux."
+  },
+  "aurora_fox": {
+    "nom": "Aurorafox",
+    "element": "Glace/Cosmic",
     "role": "Support",
     "niveau": "Nova Stage",
-    "description": "Une entité pure qui dissipe instantanément les malus de ses alliés."
+    "description": "Sa fourrure chatoyante reproduit les magnifiques couleurs des aurores boréales."
+  },
+  "thorn_crawler": {
+    "nom": "Thorncrawler",
+    "element": "Herbe/Terre",
+    "role": "BREAK",
+    "niveau": "Gamma Stage",
+    "description": "Creuse des tunnels souterrains tout en protégeant son passage avec des ronces."
+  },
+  "sol_guardian": {
+    "nom": "Sol Guardian",
+    "element": "Lumière/Roche",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Une sentinelle solaire postée aux portes des temples anciens d'Idyll."
+  },
+  "luna_watcher": {
+    "nom": "Luna Watcher",
+    "element": "Dark/Psy",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Observe le monde depuis les hauteurs en murmurant des prédictions."
+  },
+  "plasma_drake": {
+    "nom": "Plasmadrake",
+    "element": "Électrique/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Son corps génère du plasma survolté d'une puissance inouïe."
+  },
+  "zephyr_knight": {
+    "nom": "Zephyrknight",
+    "element": "Vent/Acier",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Fend l'air avec une épée légère forgée dans un alliage céleste."
+  },
+  "magma_tortoise": {
+    "nom": "Magmatortoise",
+    "element": "Feu/Roche",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Une tortue cuirassée dont la carapace sert de foyer à un magma brûlant."
+  },
+  "abyssal_ray": {
+    "nom": "Abyssalray",
+    "element": "Eau/Dark",
+    "role": "Support",
+    "niveau": "Gamma Stage",
+    "description": "Plane dans les grands fonds en émettant des impulsions bioluminescentes."
+  },
+  "giga_treant": {
+    "nom": "Gigatreant",
+    "element": "Herbe",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un arbre millénaire capable de mobiliser ses racines pour riposter."
+  },
+  "frost_spectre": {
+    "nom": "Frostspectre",
+    "element": "Glace/Spectre",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Un esprit gelé dont le toucher engourdit instantanément le corps."
+  },
+  "storm_phoenix": {
+    "nom": "Stormphoenix",
+    "element": "Feu/Vent",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un oiseau légendaire dont les flammes se mêlent à la foudre des orages."
+  },
+  "stellar_beast": {
+    "nom": "Stellarbeast",
+    "element": "Cosmic",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Une entité stellaire mythique vénérée par les explorateurs d'Idyll."
+  },
+  "aniimo_prime": {
+    "nom": "Aniimo Prime",
+    "element": "Cosmic/Lumière",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "L'alpha et l'oméga de tous les Aniimos, une légende vivante absolue."
   }
 }
