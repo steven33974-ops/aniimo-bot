@@ -1,0 +1,177 @@
+import json
+import random
+import discord
+from discord import app_commands
+from discord.ext import commands
+
+# Noms des fichiers de données
+ANIIMOS_FILE = "aniimos.json"
+INVENTORY_FILE = "inventaires.json"
+
+# Charger les données des Aniimos
+with open(ANIIMOS_FILE, "r", encoding="utf-8") as f:
+  ANIIMOS_DATA = json.load(f)
+
+
+# Fonction pour charger l'inventaire des joueurs
+def charger_inventaires():
+  try:
+    with open(INVENTORY_FILE, "r", encoding="utf-8") as f:
+      return json.load(f)
+  except FileNotFoundError:
+    return {}
+
+
+# Fonction pour sauvegarder l'inventaire des joueurs
+def sauvegarder_inventaires(data):
+  with open(INVENTORY_FILE, "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=4, ensure_ascii=False)
+
+
+# Dictionnaires pour la gestion des spawns en cours
+ACTIVES_SPAWNS = {}  # { channel_id: "nom_cle_de_l_aniimo" }
+MESSAGE_COUNTERS = {}  # { channel_id: nombre_de_messages }
+
+
+class CaptureView(discord.ui.View):
+
+  def __init__(self, aniimo_key):
+    super().__init__(timeout=180)  # Le bouton expire au bout de 3 minutes
+    self.aniimo_key = aniimo_key
+
+  @discord.ui.button(
+      label="✨ Capturer l'Aniimo !", style=discord.ButtonStyle.green
+  )
+  async def capture_button(
+      self, interaction: discord.Interaction, button: discord.ui.Button
+  ):
+    channel_id = interaction.channel.id
+
+    # Vérifie si l'Aniimo est toujours présent dans ce salon
+    if (
+        channel_id in ACTIVES_SPAWNS
+        and ACTIVES_SPAWNS[channel_id] == self.aniimo_key
+    ):
+      aniimo_info = ANIIMOS_DATA[self.aniimo_key]
+      user_id = str(interaction.user.id)
+
+      # Retire l'Aniimo du salon pour qu'il ne soit capturé qu'une seule fois
+      del ACTIVES_SPAWNS[channel_id]
+
+      # Désactive le bouton
+      for child in self.children:
+        child.disabled = True
+      await interaction.message.edit(view=self)
+
+      # --- Gestion de la sauvegarde dans l'inventaire ---
+      inventaires = charger_inventaires()
+      if user_id not in inventaires:
+        inventaires[user_id] = []
+
+      # Ajoute l'Aniimo à la collection du joueur
+      inventaires[user_id].append(self.aniimo_key)
+      sauvegarder_inventaires(inventaires)
+
+      await interaction.response.send_message(
+          f"🎉 **{interaction.user.name}** a réussi à capturer"
+          f" **{aniimo_info['nom']}** !"
+      )
+    else:
+      await interaction.response.send_message(
+          "Dommage ! Cet Aniimo s'est déjà enfui ou a déjà été capturé.",
+          ephemeral=True,
+      )
+
+
+class AniimoBot(commands.Bot):
+
+  async def setup_hook(self):
+    await self.tree.sync()
+    print(f"Connecté en tant que {self.user}")
+
+
+intents = discord.Intents.default()
+intents.message_content = (
+    True  # Requis pour détecter les messages et faire spawner les Aniimos
+)
+bot = AniimoBot(command_prefix="!", intents=intents)
+
+
+@bot.event
+async def on_message(message):
+  if message.author.bot:
+    return
+
+  channel_id = message.channel.id
+
+  if channel_id not in MESSAGE_COUNTERS:
+    MESSAGE_COUNTERS[channel_id] = 0
+
+  MESSAGE_COUNTERS[channel_id] += 1
+
+  # Un Aniimo apparaît tous les 15 messages dans le salon
+  if MESSAGE_COUNTERS[channel_id] >= 15:
+    MESSAGE_COUNTERS[channel_id] = 0
+
+    if ANIIMOS_DATA:
+      random_key = random.choice(list(ANIIMOS_DATA.keys()))
+      aniimo_info = ANIIMOS_DATA[random_key]
+
+      ACTIVES_SPAWNS[channel_id] = random_key
+
+      embed = discord.Embed(
+          title="🚨 Un Aniimo sauvage apparaît !",
+          description=(
+              f"Un **{aniimo_info['nom']}** sauvage pointe le bout de son"
+              " nez !\nClique sur le bouton ci-dessous pour l'attraper !"
+          ),
+          color=discord.Color.orange(),
+      )
+      embed.add_field(name="Élément", value=aniimo_info["element"], inline=True)
+      embed.add_field(name="Rôle", value=aniimo_info["role"], inline=True)
+      embed.set_footer(text="Sois le plus rapide !")
+
+      view = CaptureView(random_key)
+      await message.channel.send(embed=embed, view=view)
+
+  await bot.process_commands(message)
+
+
+# --- Commande pour voir son inventaire d'Aniimos ---
+@bot.tree.command(
+    name="inventaire", description="Affiche la liste de tes Aniimos capturés"
+)
+async def inventaire(interaction: discord.Interaction):
+  user_id = str(interaction.user.id)
+  inventaires = charger_inventaires()
+
+  if user_id not in inventaires or not inventaires[user_id]:
+    await interaction.response.send_message(
+        "Tu n'as capturé aucun Aniimo pour l'instant. Discute dans les salons"
+        " pour en faire apparaître !",
+        ephemeral=True,
+    )
+    return
+
+  # Compte les doublons pour faire un affichage propre (ex: Emberpup x2)
+  compteur_aniimos = {}
+  for key in inventaires[user_id]:
+    compteur_aniimos[key] = compteur_aniimos.get(key, 0) + 1
+
+  description_texte = ""
+  for key, quantite in compteur_aniimos.items():
+    if key in ANIIMOS_DATA:
+      nom = ANIIMOS_DATA[key]["nom"]
+      element = ANIIMOS_DATA[key]["element"]
+      description_texte += f"• **{nom}** ({element}) x{quantite}\n"
+
+  embed = discord.Embed(
+      title=f"🎒 Inventaire de {interaction.user.name}",
+      description=description_texte,
+      color=discord.Color.blue(),
+  )
+  await interaction.response.send_message(embed=embed)
+
+
+# Lance ton bot (remplace par ton token)
+bot.run("TON_TOKEN_DISCORD")
