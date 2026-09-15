@@ -7,11 +7,20 @@ from discord.ext import commands
 
 # --- FICHIERS DE DONNÉES ---
 ANIIMOS_FILE = "aniimos.json"
+ANIIMOS_FILE_2 = "aniimos_2.json"  # Second fichier pour les Aniimos supplémentaires
 INVENTORY_FILE = "inventaires.json"
 
-# Charger les données des Aniimos
+# Charger les données des Aniimos du premier fichier
 with open(ANIIMOS_FILE, "r", encoding="utf-8") as f:
     ANIIMOS_DATA = json.load(f)
+
+# Charger et fusionner les Aniimos du deuxième fichier (s'il existe)
+try:
+    with open(ANIIMOS_FILE_2, "r", encoding="utf-8") as f:
+        data_2 = json.load(f)
+        ANIIMOS_DATA.update(data_2)
+except FileNotFoundError:
+    pass
 
 def charger_inventaires():
     try:
@@ -105,13 +114,9 @@ class CombatView(discord.ui.View):
 
         if interaction.user == self.p1:
             self.p2_hp -= degats
-            attaquant = self.p1_aniimo['nom']
-            defenseur = self.p2_aniimo['nom']
             self.turn = self.p2
         else:
             self.p1_hp -= degats
-            attaquant = self.p2_aniimo['nom']
-            defenseur = self.p1_aniimo['nom']
             self.turn = self.p1
 
         # Vérifier si un joueur a gagné
@@ -129,7 +134,7 @@ class CombatView(discord.ui.View):
         embed = discord.Embed(title="⚔️ Combat RPG en cours", color=discord.Color.orange)
         embed.add_field(name=f"{self.p1.name} ({self.p1_aniimo['nom']})", value=f"❤️ PV: {max(0, self.p1_hp)}/100", inline=True)
         embed.add_field(name=f"{self.p2.name} ({self.p2_aniimo['nom']})", value=f"❤️ PV: {max(0, self.p2_hp)}/100", inline=True)
-        embed.set.footer = f"C'est au tour de {self.turn.name} de jouer !"
+        embed.set_footer(text=f"C'est au tour de {self.turn.name} de jouer !")
 
         await interaction.response.edit_message(embed=embed, view=self)
 
@@ -156,11 +161,10 @@ async def on_message(message):
     channel_id = message.channel.id
     MESSAGE_COUNTERS[channel_id] = MESSAGE_COUNTERS.get(channel_id, 0) + 1
 
-    # Tous les 10 messages, un Aniimo sauvage apparaît dans le salon !
+    # Tous les 10 messages, un Aniimo sauvage apparaît dans le salon
     if MESSAGE_COUNTERS[channel_id] >= 10:
         MESSAGE_COUNTERS[channel_id] = 0
 
-        # Choisir un Aniimo aléatoire
         aniimo_key = random.choice(list(ANIIMOS_DATA.keys()))
         aniimo_info = ANIIMOS_DATA[aniimo_key]
         ACTIVES_SPAWNS[channel_id] = aniimo_key
@@ -173,7 +177,6 @@ async def on_message(message):
         embed.set_footer(text="Clique sur le bouton ci-dessous pour le capturer !")
 
         view = CaptureView(aniimo_key)
-        await message.channel.id
         await message.channel.send(embed=embed, view=view)
 
     await bot.process_commands(message)
@@ -208,7 +211,6 @@ async def combat(interaction: discord.Interaction, adversaire: discord.Member):
     adv_id = str(adversaire.id)
     inventaires = charger_inventaires()
 
-    # Vérification des équipes
     if user_id not in inventaires or not inventaires[user_id]["equipe"]:
         await interaction.response.send_message("Tu n'as pas d'Aniimo dans ton équipe ! Capture-en un d'abord.", ephemeral=True)
         return
