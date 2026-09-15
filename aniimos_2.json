@@ -166,5 +166,47 @@
     "role": "Support",
     "niveau": "Nova Stage",
     "description": "Variante brumeuse spécialisée dans l'absorption de dégâts."
+  },
+  "extra_dummy_1": {
+    "nom": "Volty",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Une petite boule d'énergie statique."
+  },
+  "extra_dummy_2": {
+    "nom": "Aquajet",
+    "element": "Eau",
+    "role": "DPS",
+    "niveau": "Gamma Stage",
+    "description": "Fend les flots à une vitesse fulgurante."
+  },
+  "extra_dummy_3": {
+    "nom": "Leafguard",
+    "element": "Herbe",
+    "role": "Tank",
+    "niveau": "Gamma Stage",
+    "description": "Défend la nature avec des lianes robustes."
+  },
+  "extra_dummy_4": {
+    "nom": "Pyromite",
+    "element": "Feu",
+    "role": "BREAK",
+    "niveau": "Base Form",
+    "description": "小さな explosive créature des sols arides."
+  },
+  "extra_dummy_5": {
+    "nom": "Stoneling",
+    "element": "Roche",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "Un galet vivant qui adore rouler."
+  },
+  "extra_dummy_6": {
+    "nom": "Windy",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Flotte doucement sur les courants thermiques."
   }
 }
