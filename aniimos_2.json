@@ -1,37 +1,79 @@
 {
-  "solaris": {
-    "nom": "Solaris",
-    "element": "Feu/Cosmic",
-    "role": "DPS",
-    "niveau": "Nova Stage",
-    "description": "Un être majestueux tirant sa puissance des supernovas lointaines."
+  "chirpi": {
+    "nom": "Chirpi",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Lumin Stage",
+    "description": "Petit oiseau agile des zones verdoyantes."
   },
-  "frostpaw": {
-    "nom": "Frostpaw",
-    "element": "Glace",
+  "tromber": {
+    "nom": "Tromber",
+    "element": "Vent",
+    "role": "BREAK",
+    "niveau": "Gamma Stage",
+    "description": "Spécialiste pour briser la jauge de défense adverse."
+  },
+  "cornet": {
+    "nom": "Cornet",
+    "element": "Eau",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Créature aquatique polyvalente dotée de multiples formes."
+  },
+  "tubster": {
+    "nom": "Tubster",
+    "element": "Eau",
     "role": "Tank",
     "niveau": "Lumin Stage",
-    "description": "Un louveteau des neiges capable de geler le sol instantanément."
+    "description": "Un Aniimo robuste qui encaisse les coups avec aisance."
   },
-  "terAVolt": {
-    "nom": "Teravolt",
-    "element": "Électrique",
-    "role": "BREAK",
+  "otti": {
+    "nom": "Otti",
+    "element": "Eau",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Maître des combats rapprochés générant des dégâts continus."
+  },
+  "irisal": {
+    "nom": "Irisal",
+    "element": "Lumière/Cosmic",
+    "role": "Support",
     "niveau": "Nova Stage",
-    "description": "Une bête électrique survoltée qui pulvérise les défenses adverses."
+    "description": "Un Aniimo radieux capable de plier la lumière pour soigner et renforcer."
   },
-  "florAMOUR": {
-    "nom": "Floramour",
-    "element": "Herbe",
+  "somniwing": {
+    "nom": "Somniwing",
+    "element": "Psy",
     "role": "Support",
     "niveau": "Gamma Stage",
-    "description": "Dispense des effluves apaisantes qui régénèrent l'équipe."
+    "description": "Émet des ondes apaisantes pour endormir ses rivaux en plein vol."
   },
-  "shadowfang": {
-    "nom": "Shadowfang",
-    "element": "Dark",
+  "rookey": {
+    "nom": "Rookey",
+    "element": "Roche/Acier",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "Une petite sentinelle blindée qui ne recule jamais."
+  },
+  "fennelun": {
+    "nom": "Fennelun",
+    "element": "Feu/Psy",
+    "role": "DPS",
+    "niveau": "Lumin Stage",
+    "description": "Esprit rusé manipulant des flammes illusoires."
+  },
+  "helion": {
+    "nom": "Helion",
+    "element": "Feu",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Un chasseur nocturne invisible dans l'obscurité totale."
+    "description": "Incarnation solaire pure, ses attaques embrasent tout sur leur passage."
+  },
+  "malevsera": {
+    "nom": "Malevsera",
+    "element": "Dark/Venin",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Entité ténébreuse redoutée pour ses poisons mortels."
   }
 }
