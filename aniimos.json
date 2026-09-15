@@ -27,6 +27,27 @@
     "niveau": "Nova Stage",
     "description": "Prédateur embrasé des régions volcaniques d'Idyll."
   },
+  "nimbi_base": {
+    "nom": "Nimbi",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Créature aérienne discrète qui aime se enrouler dans des couches de nuages."
+  },
+  "nimbi_rainstorm": {
+    "nom": "Nimbi (Rainstorm)",
+    "element": "Eau/Vent",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Variante de tempête de pluie de Nimbi aux capacités de contrôle amplifiées."
+  },
+  "nimbi_cloudmist": {
+    "nom": "Nimbi (Cloudmist)",
+    "element": "Glace/Vent",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Variante brumeuse de plateau spécialisée dans l'absorption de dégâts."
+  },
   "celestis": {
     "nom": "Celestis",
     "element": "Dark",
@@ -68,5 +89,19 @@
     "role": "Tank",
     "niveau": "Lumin Stage",
     "description": "Un Aniimo robuste qui encaisse les coups avec aisance."
+  },
+  "budclaw": {
+    "nom": "Budclaw",
+    "element": "Herbe/Terre",
+    "role": "Support",
+    "niveau": "Lumin Stage",
+    "description": "Défensif et spécialisé dans les dégâts sur la durée grâce aux feuilles de sa carapace."
+  },
+  "otti": {
+    "nom": "Otti",
+    "element": "Eau",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Maître des combats rapprochés générant des dégâts continus d'eau."
   }
 }
