@@ -1,0 +1,37 @@
+{
+  "pyroclaw": {
+    "nom": "Pyroclaw",
+    "element": "Feu",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Un jeune combattant ardent dont les griffes chauffent au contact de l'air."
+  },
+  "magmabeak": {
+    "nom": "Magmabeak",
+    "element": "Feu/Roche",
+    "role": "BREAK",
+    "niveau": "Gamma Stage",
+    "description": "Son bec durci brise la roche en fusion d'un seul coup sec."
+  },
+  "volcaraptor": {
+    "nom": "Volcaraptor",
+    "element": "Feu/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Prédateur ultime des caldeiras, rapide et dévastateur."
+  },
+  "aquapup": {
+    "nom": "Aquapup",
+    "element": "Eau",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Joueur et amical, il glisse sur les rapides avec une aisance déconcertante."
+  },
+  "torrentis": {
+    "nom": "Torrentis",
+    "element": "Eau",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Canalise des trombes d'eau sous pression pour balayer ses opposants."
+  }
+}
