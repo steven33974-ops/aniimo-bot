@@ -1,37 +1,212 @@
 {
-  "leafling": {
-    "nom": "Leafling",
+  "aquakit": {
+    "nom": "Aquakit",
+    "element": "Eau",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Un petit chaton aquatique qui adore jouer avec l'écume."
+  },
+  "torrentcat": {
+    "nom": "Torrentcat",
+    "element": "Eau",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Agile et vif, il lacère ses adversaires avec des griffes d'eau sous pression."
+  },
+  "magmacub": {
+    "nom": "Magmacub",
+    "element": "Feu/Terre",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "Un louveteau dont la fourrure dégage une forte chaleur."
+  },
+  "volcanobeast": {
+    "nom": "Volcanobeast",
+    "element": "Feu/Terre",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un monstre titanesque dont le dos crache des geysers de lave."
+  },
+  "leafbud": {
+    "nom": "Leafbud",
     "element": "Herbe",
     "role": "Support",
     "niveau": "Base Form",
-    "description": "Une fée des bois minuscule qui absorbe l'énergie solaire pour grandir."
+    "description": "Un bourgeon souriant qui s'ouvre dès les premiers rayons du matin."
   },
-  "floraspark": {
-    "nom": "Floraspark",
-    "element": "Herbe/Électrique",
-    "role": "Control",
+  "bloomqueen": {
+    "nom": "Bloomqueen",
+    "element": "Herbe/Lumière",
+    "role": "Support",
     "niveau": "Nova Stage",
-    "description": "Ses fleurs émettent des spores lumineuses et des micro-décharges."
+    "description": "Règne sur la flore en prodiguant des soins extraordinaires à son équipe."
   },
-  "voltmouse": {
-    "nom": "Voltmouse",
+  "voltchick": {
+    "nom": "Voltchick",
     "element": "Électrique",
     "role": "DPS",
     "niveau": "Base Form",
-    "description": "Stocke de l'électricité statique dans ses joues rebondies."
+    "description": "Ses plumes crépitent en permanence au rythme de son cœur."
   },
-  "thundermane": {
-    "nom": "Thundermane",
-    "element": "Électrique",
+  "zapraptor": {
+    "nom": "Zapraptor",
+    "element": "Électrique/Dragon",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Chevauche les éclairs au cœur des orages les plus violents."
+    "description": "Fulgurant et agressif, il fond sur sa cible comme un éclair."
   },
-  "spectril": {
-    "nom": "Spectril",
-    "element": "Psy/Spectre",
+  "psybunny": {
+    "nom": "Psybunny",
+    "element": "Psy",
     "role": "Control",
     "niveau": "Base Form",
-    "description": "Flotte silencieusement entre les dimensions pour observer les voyageurs."
+    "description": "Lévite de petits objets par la simple force de son regard."
+  },
+  "telepathix": {
+    "nom": "Telepathix",
+    "element": "Psy",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Anticipe les mouvements ennemis avant même qu'ils ne soient exécutés."
+  },
+  "rock_pup": {
+    "nom": "Rockpup",
+    "element": "Roche",
+    "role": "BREAK",
+    "niveau": "Base Form",
+    "description": "Mordille les pierres pour se faire les crocs."
+  },
+  "stone_hound": {
+    "nom": "Stonehound",
+    "element": "Roche",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Un chien de garde robuste taillé dans le granit."
+  },
+  "windsprite": {
+    "nom": "Windsprite",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Une fée miniature dansant au gré du vent."
+  },
+  "gale_spirit": {
+    "nom": "Galespirit",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Invoque des bourrasques capables de repousser une armée entière."
+  },
+  "ice_cub": {
+    "nom": "Icecub",
+    "element": "Glace",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "Un petit cube de glace particulièrement résistant aux chocs."
+  },
+  "glacierbear": {
+    "nom": "Glacierbear",
+    "element": "Glace/Tank",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un ours polaire massif armé d'une fourrure glacée invulnérable."
+  },
+  "shadow_pup": {
+    "nom": "Shadowpup",
+    "element": "Dark",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Se fond dans l'ombre de son dresseur avec discrétion."
+  },
+  "dark_hound": {
+    "nom": "Darkhound",
+    "element": "Dark",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un prédateur nocturne redouté pour ses crocs d'obsidienne."
+  },
+  "light_sprite": {
+    "nom": "Lightsprite",
+    "element": "Lumière",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Une étincelle céleste qui guide les voyageurs perdus."
+  },
+  "radiant_angel": {
+    "nom": "Radiantangel",
+    "element": "Lumière",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Un être angélique bienveillant immunisé contre toutes les altérations."
+  },
+  "venom_bug": {
+    "nom": "Venombug",
+    "element": "Venin/Insecte",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Sécrète un venin visqueux pour immobiliser ses proies."
+  },
+  "toxic_queen": {
+    "nom": "Toxicqueen",
+    "element": "Venin/Insecte",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Commande à des nuages de dards toxiques."
+  },
+  "steel_bird": {
+    "nom": "Steelbird",
+    "element": "Acier/Vent",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Plane silencieusement avec des ailes en acier affûté."
+  },
+  "valkyrion": {
+    "nom": "Valkyrion",
+    "element": "Acier/Vent",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Une sentinelle volante capable de trancher l'acier d'un coup d'aile."
+  },
+  "ghost_doll": {
+    "nom": "Ghostdoll",
+    "element": "Spectre",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Une poupée abandonnée possédée par un esprit errant."
+  },
+  "phantom_lord": {
+    "nom": "Phantomlord",
+    "element": "Spectre/Dark",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Maître des cauchemars et des dimensions parallèles."
+  },
+  "cosmic_egg": {
+    "nom": "Cosmicegg",
+    "element": "Cosmic",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Un œuf mystérieux qui pulse au rythme des ondes cosmiques."
+  },
+  "celestial_god": {
+    "nom": "Celestialgod",
+    "element": "Cosmic/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Une divinité galactique née aux premiers instants de l'univers d'Idyll."
+  },
+  "mud_crab": {
+    "nom": "Mudcrab",
+    "element": "Eau/Terre",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "S'enterre dans la vase pour tendre des embuscades."
+  },
+  "tide_goliath": {
+    "nom": "Tidegoliath",
+    "element": "Eau/Roche",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un mastodonte des plages capable de soulever des rochers géants."
   }
 }
