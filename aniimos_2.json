@@ -1,87 +1,164 @@
 {
-  "budclaw": {
-    "nom": "Budclaw",
-    "element": "Herbe/Roche",
-    "role": "BREAK",
+  "malevsera": {
+    "nom": "Malevsera",
+    "element": "Dark/Venin",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Entité ténébreuse redoutée pour ses poisons mortels."
+  },
+  "solaris": {
+    "nom": "Solaris",
+    "element": "Feu/Cosmic",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un être majestueux tirant sa puissance des supernovas lointaines."
+  },
+  "frostpaw": {
+    "nom": "Frostpaw",
+    "element": "Glace",
+    "role": "Tank",
     "niveau": "Lumin Stage",
-    "description": "Défensif et spécialisé dans l'accumulation de Momentum sur le rivage."
+    "description": "Un louveteau des neiges capable de geler le sol instantanément."
   },
-  "shelly": {
-    "nom": "Shelly",
-    "element": "Eau",
-    "role": "Tank",
-    "niveau": "Base Form",
-    "description": "Petite créature aquatique protégée par une coquille solide."
-  },
-  "sheldon": {
-    "nom": "Sheldon",
-    "element": "Eau",
-    "role": "Tank",
-    "niveau": "Gamma Stage",
-    "description": "Évolution intermédiaire encaissant les coups les plus rudes."
-  },
-  "sherro": {
-    "nom": "Sherro",
-    "element": "Eau",
-    "role": "Tank",
-    "niveau": "Nova Stage",
-    "description": "Rempart massif protégeant toute l'équipe des assauts ennemis."
-  },
-  "pebbling": {
-    "nom": "Pebbling",
-    "element": "Terre",
-    "role": "BREAK",
-    "niveau": "Base Form",
-    "description": "Composé de cailloux assemblés, excelle pour briser les gardes."
-  },
-  "geodeback": {
-    "nom": "Geodeback",
-    "element": "Terre",
-    "role": "BREAK",
-    "niveau": "Gamma Stage",
-    "description": "Renferme des cristaux précieux sous sa carapace rocheuse."
-  },
-  "minespine": {
-    "nom": "Minespine",
-    "element": "Terre",
+  "teravolt": {
+    "nom": "Teravolt",
+    "element": "Électrique",
     "role": "BREAK",
     "niveau": "Nova Stage",
-    "description": "Hérissé de pointes minérales destructrices."
+    "description": "Une bête électrique survoltée qui pulvérise les défenses adverses."
   },
-  "pawney": {
-    "nom": "Pawney",
+  "floramour": {
+    "nom": "Floramour",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Gamma Stage",
+    "description": "Dispense des effluves apaisantes qui régénèrent l'équipe."
+  },
+  "shadowfang": {
+    "nom": "Shadowfang",
     "element": "Dark",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Combattant blindé infligeant des dégâts accrus aux cibles sous contrôle."
+    "description": "Un chasseur nocturne invisible dans l'obscurité totale."
   },
-  "ignitis": {
-    "nom": "Ignitis",
-    "element": "Dark",
+  "pyroclaw": {
+    "nom": "Pyroclaw",
+    "element": "Feu",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Un jeune combattant ardent dont les griffes chauffent au contact de l'air."
+  },
+  "magmabeak": {
+    "nom": "Magmabeak",
+    "element": "Feu/Roche",
+    "role": "BREAK",
+    "niveau": "Gamma Stage",
+    "description": "Son bec durci brise la roche en fusion d'un seul coup sec."
+  },
+  "volcaraptor": {
+    "nom": "Volcaraptor",
+    "element": "Feu/Dragon",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Assassin ténébreux spécialisé dans les frappes fulgurantes en embuscade."
+    "description": "Prédateur ultime des caldeiras, rapide et dévastateur."
   },
-  "susuta": {
-    "nom": "Susuta",
+  "aquapup": {
+    "nom": "Aquapup",
     "element": "Eau",
-    "role": "BREAK",
-    "niveau": "Lumin Stage",
-    "description": "Spécialiste de la rupture de jauge aux multiples embranchements."
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Joueur et amical, il glisse sur les rapides avec une aisance déconcertante."
+  },
+  "torrentis": {
+    "nom": "Torrentis",
+    "element": "Eau",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Canalise des trombes d'eau sous pression pour balayer ses opposants."
+  },
+  "leafling": {
+    "nom": "Leafling",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Une fée des bois minuscule qui absorbe l'énergie solaire pour grandir."
+  },
+  "floraspark": {
+    "nom": "Floraspark",
+    "element": "Herbe/Électrique",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Ses fleurs émettent des spores lumineuses et des micro-décharges."
+  },
+  "voltmouse": {
+    "nom": "Voltmouse",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Stocke de l'électricité statique dans ses joues rebondies."
+  },
+  "thundermane": {
+    "nom": "Thundermane",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Chevauche les éclairs au cœur des orages les plus violents."
+  },
+  "spectril": {
+    "nom": "Spectril",
+    "element": "Psy/Spectre",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Flotte silencieusement entre les dimensions pour observer les voyageurs."
+  },
+  "draconis_base": {
+    "nom": "Draconis",
+    "element": "Dragon",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Un jeune dragon curieux rêvant de conquérir les cieux d'Idyll."
+  },
+  "draconis_storm": {
+    "nom": "Draconis (Storm)",
+    "element": "Dragon/Vent",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Forme évoluée maîtrisant les tempêtes de haute altitude."
+  },
+  "draconis_abyss": {
+    "nom": "Draconis (Abyss)",
+    "element": "Dragon/Dark",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Variante ténébreuse redoutée des abysses souterrains."
+  },
+  "titanos": {
+    "nom": "Titanos",
+    "element": "Roche/Terre",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un colosse ancestral dont le corps est constitué de monolithes sacrés."
+  },
+  "lumina": {
+    "nom": "Lumina",
+    "element": "Lumière",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Une entité pure qui dissipe instantanément les malus de ses alliés."
   },
   "nimbi_base": {
     "nom": "Nimbi",
     "element": "Vent",
     "role": "Support",
     "niveau": "Base Form",
-    "description": "Créature aérienne discrète qui s'enroule dans les nuages."
+    "description": "Créature aérienne discrète qui s'enroule dans les couches de nuages."
   },
   "nimbi_rainstorm": {
     "nom": "Nimbi (Rainstorm)",
     "element": "Eau/Vent",
     "role": "Support",
     "niveau": "Nova Stage",
-    "description": "Variante de tempête de pluie aux capacités de contrôle amplifiées."
+    "description": "Variante de tempête de pluie de Nimbi aux capacités de contrôle amplifiées."
   },
   "nimbi_cloudmist": {
     "nom": "Nimbi (Cloudmist)",
@@ -89,19 +166,5 @@
     "role": "Support",
     "niveau": "Nova Stage",
     "description": "Variante brumeuse spécialisée dans l'absorption de dégâts."
-  },
-  "irisal": {
-    "nom": "Irisal",
-    "element": "Lumière/Cosmic",
-    "role": "Support",
-    "niveau": "Nova Stage",
-    "description": "Un Aniimo radieux capable de plier la lumière pour soigner et renforcer."
-  },
-  "somniwing": {
-    "nom": "Somniwing",
-    "element": "Psy",
-    "role": "Support",
-    "niveau": "Gamma Stage",
-    "description": "Émet des ondes apaisantes pour endormir ses rivaux en plein vol."
   }
 }
