@@ -32,7 +32,7 @@
     "element": "Vent",
     "role": "Support",
     "niveau": "Base Form",
-    "description": "Créature aérienne discrète qui aime se enrouler dans des couches de nuages."
+    "description": "Créature aérienne discrète qui aime s'enrouler dans des couches de nuages."
   },
   "nimbi_rainstorm": {
     "nom": "Nimbi (Rainstorm)",
@@ -103,5 +103,47 @@
     "role": "DPS",
     "niveau": "Base Form",
     "description": "Maître des combats rapprochés générant des dégâts continus d'eau."
+  },
+  "irisal": {
+    "nom": "Irisal",
+    "element": "Lumière/Cosmic",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Un Aniimo radieux capable de plier la lumière pour soigner et renforcer ses alliés."
+  },
+  "somniwing": {
+    "nom": "Somniwing",
+    "element": "Psy",
+    "role": "Control",
+    "niveau": "Gamma Stage",
+    "description": "Il émet des ondes apaisantes qui endorment ses rivaux en plein vol."
+  },
+  "rookey": {
+    "nom": "Rookey",
+    "element": "Roche/Acier",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "Une petite sentinelle blindée qui ne recule jamais devant le danger."
+  },
+  "fennelun": {
+    "nom": "Fennelun",
+    "element": "Feu/Psy",
+    "role": "DPS",
+    "niveau": "Lumin Stage",
+    "description": "Esprit rusé manipulant des flammes illusoires pour tromper ses adversaires."
+  },
+  "helion": {
+    "nom": "Helion",
+    "element": "Feu",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Incarnation solaire pure, ses attaques embrasent tout sur leur passage."
+  },
+  "malevsera": {
+    "nom": "Malevsera",
+    "element": "Dark/Venin",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Une entité ténébreuse redoutée pour ses tactiques vicieuses et ses poisons mortels."
   }
 }
