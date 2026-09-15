@@ -1,0 +1,37 @@
+{
+  "draconis_base": {
+    "nom": "Draconis",
+    "element": "Dragon",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Un jeune dragon curieux rêvant de conquérir les cieux d'Idyll."
+  },
+  "draconis_storm": {
+    "nom": "Draconis (Storm)",
+    "element": "Dragon/Vent",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Forme évoluée maîtrisant les tempêtes de haute altitude."
+  },
+  "draconis_abyss": {
+    "nom": "Draconis (Abyss)",
+    "element": "Dragon/Dark",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Variante ténébreuse redoutée des abysses souterrains."
+  },
+  "titanos": {
+    "nom": "Titanos",
+    "element": "Roche/Terre",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un colosse ancestral dont le corps est constitué de monolithes sacrés."
+  },
+  "lumina": {
+    "nom": "Lumina",
+    "element": "Lumière",
+    "role": "Support",
+    "niveau": "Nova Stage",
+    "description": "Une entité pure qui dissipe instantanément les malus de ses alliés."
+  }
+}
