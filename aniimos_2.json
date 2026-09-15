@@ -1,0 +1,37 @@
+{
+  "solaris": {
+    "nom": "Solaris",
+    "element": "Feu/Cosmic",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un être majestueux tirant sa puissance des supernovas lointaines."
+  },
+  "frostpaw": {
+    "nom": "Frostpaw",
+    "element": "Glace",
+    "role": "Tank",
+    "niveau": "Lumin Stage",
+    "description": "Un louveteau des neiges capable de geler le sol instantanément."
+  },
+  "terAVolt": {
+    "nom": "Teravolt",
+    "element": "Électrique",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Une bête électrique survoltée qui pulvérise les défenses adverses."
+  },
+  "florAMOUR": {
+    "nom": "Floramour",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Gamma Stage",
+    "description": "Dispense des effluves apaisantes qui régénèrent l'équipe."
+  },
+  "shadowfang": {
+    "nom": "Shadowfang",
+    "element": "Dark",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un chasseur nocturne invisible dans l'obscurité totale."
+  }
+}
