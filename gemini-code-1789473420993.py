@@ -7,20 +7,18 @@ from discord.ext import commands
 
 # --- FICHIERS DE DONNÉES ---
 ANIIMOS_FILE = "aniimos.json"
-ANIIMOS_FILE_2 = "aniimos_2.json"  # Second fichier pour les Aniimos supplémentaires
+ANIIMOS_FILE_2 = "aniimos_2.json"
 INVENTORY_FILE = "inventaires.json"
 
-# Charger les données des Aniimos du premier fichier
-with open(ANIIMOS_FILE, "r", encoding="utf-8") as f:
-    ANIIMOS_DATA = json.load(f)
-
-# Charger et fusionner les Aniimos du deuxième fichier (s'il existe)
-try:
-    with open(ANIIMOS_FILE_2, "r", encoding="utf-8") as f:
-        data_2 = json.load(f)
-        ANIIMOS_DATA.update(data_2)
-except FileNotFoundError:
-    pass
+# Charger et fusionner les bases de données d'Aniimos
+ANIIMOS_DATA = {}
+for file_path in [ANIIMOS_FILE, ANIIMOS_FILE_2]:
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            ANIIMOS_DATA.update(data)
+    except FileNotFoundError:
+        pass
 
 def charger_inventaires():
     try:
@@ -41,14 +39,13 @@ ACTIVE_BATTLES = set()   # Pour éviter qu'un joueur lance plusieurs combats en 
 # --- INTERFACE DE CAPTURE (BOUTON) ---
 class CaptureView(discord.ui.View):
     def __init__(self, aniimo_key):
-        super().__init__(timeout=180) # Expire au bout de 3 minutes
+        super().__init__(timeout=180)
         self.aniimo_key = aniimo_key
 
     @discord.ui.button(label="✨ Capturer l'Aniimo !", style=discord.ButtonStyle.green)
     async def capture_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         channel_id = interaction.channel.id
         
-        # Vérifie si l'Aniimo est toujours là
         if channel_id not in ACTIVES_SPAWNS or ACTIVES_SPAWNS[channel_id] != self.aniimo_key:
             await interaction.response.send_message("❌ Cet Aniimo s'est déjà échappé ou a déjà été capturé !", ephemeral=True)
             return
@@ -60,30 +57,25 @@ class CaptureView(discord.ui.View):
         if user_id not in inventaires:
             inventaires[user_id] = {"equipe": [], "box": []}
 
-        # Ajout de l'Aniimo dans la box du joueur
         inventaires[user_id]["box"].append({
             "id": self.aniimo_key,
             "nom": aniimo_info["nom"],
             "element": aniimo_info["element"],
             "role": aniimo_info["role"],
-            "niveau": 5 # Niveau de départ RPG
+            "niveau": 5
         })
         
-        # Si le joueur n'a pas d'équipe active, on lui en met un par défaut
         if not inventaires[user_id]["equipe"]:
             inventaires[user_id]["equipe"].append(inventaires[user_id]["box"][-1])
 
         sauvegarder_inventaires(inventaires)
-
-        # Retire le spawn du canal
         del ACTIVES_SPAWNS[channel_id]
 
-        # Désactive le bouton
         for child in self.children:
             child.disabled = True
         await interaction.message.edit(view=self)
 
-        await interaction.response.send_message(f"🎉 **{interaction.user.name}** a réussi à capturer un **{aniimo_info['nom']}** ({aniimo_info['element']}) !")
+        await interaction.response.send_message(f"🎉 **{interaction.user.name}** a capturé un **{aniimo_info['nom']}** ({aniimo_info['element']}) !")
 
 # --- SYSTÈME DE COMBAT RPG AU TOUR PAR TOUR ---
 class CombatView(discord.ui.View):
@@ -93,11 +85,9 @@ class CombatView(discord.ui.View):
         self.p2 = p2
         self.p1_aniimo = p1_aniimo
         self.p2_aniimo = p2_aniimo
-        
-        # PV de base pour le RPG
         self.p1_hp = 100
         self.p2_hp = 100
-        self.turn = p1 # C'est au joueur 1 de commencer
+        self.turn = p1
 
     @discord.ui.button(label="⚔️ Attaquer", style=discord.ButtonStyle.danger)
     async def attack_button(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -109,7 +99,6 @@ class CombatView(discord.ui.View):
             await interaction.response.send_message("Ce n'est pas ton tour de jouer !", ephemeral=True)
             return
 
-        # Calcul des dégâts
         degats = random.randint(15, 30)
 
         if interaction.user == self.p1:
@@ -119,7 +108,6 @@ class CombatView(discord.ui.View):
             self.p1_hp -= degats
             self.turn = self.p1
 
-        # Vérifier si un joueur a gagné
         if self.p1_hp <= 0 or self.p2_hp <= 0:
             gagnant = self.p1 if self.p1_hp > 0 else self.p2
             for child in self.children:
@@ -130,14 +118,12 @@ class CombatView(discord.ui.View):
             await interaction.response.send_message(f"🏆 Fin du combat ! **{gagnant.mention}** remporte la victoire !")
             return
 
-        # Mettre à jour l'affichage du combat
         embed = discord.Embed(title="⚔️ Combat RPG en cours", color=discord.Color.orange)
         embed.add_field(name=f"{self.p1.name} ({self.p1_aniimo['nom']})", value=f"❤️ PV: {max(0, self.p1_hp)}/100", inline=True)
         embed.add_field(name=f"{self.p2.name} ({self.p2_aniimo['nom']})", value=f"❤️ PV: {max(0, self.p2_hp)}/100", inline=True)
         embed.set_footer(text=f"C'est au tour de {self.turn.name} de jouer !")
 
         await interaction.response.edit_message(embed=embed, view=self)
-
 
 # --- CONFIGURATION DU BOT ---
 intents = discord.Intents.default()
@@ -152,7 +138,6 @@ async def on_ready():
     except Exception as e:
         print(e)
 
-# --- SYSTÈME DE SPAWN AUTOMATIQUE VIA LES MESSAGES ---
 @bot.event
 async def on_message(message):
     if message.author.bot:
@@ -161,7 +146,7 @@ async def on_message(message):
     channel_id = message.channel.id
     MESSAGE_COUNTERS[channel_id] = MESSAGE_COUNTERS.get(channel_id, 0) + 1
 
-    # Tous les 10 messages, un Aniimo sauvage apparaît dans le salon
+    # Apparition tous les 10 messages
     if MESSAGE_COUNTERS[channel_id] >= 10:
         MESSAGE_COUNTERS[channel_id] = 0
 
@@ -181,8 +166,7 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-# --- COMMANDES RPG ET COLLECTION ---
-
+# --- COMMANDES RPG ---
 @bot.tree.command(name="inventaire", description="Affiche tes Aniimos capturés.")
 async def inventaire(interaction: discord.Interaction):
     user_id = str(interaction.user.id)
@@ -199,7 +183,6 @@ async def inventaire(interaction: discord.Interaction):
 
     embed = discord.Embed(title=f"🎒 Inventaire de {interaction.user.name}", description=description, color=discord.Color.purple())
     await interaction.response.send_message(embed=embed)
-
 
 @bot.tree.command(name="combat", description="Affronte un autre joueur en duel RPG avec ton premier Aniimo !")
 async def combat(interaction: discord.Interaction, adversaire: discord.Member):
@@ -236,5 +219,5 @@ async def combat(interaction: discord.Interaction, adversaire: discord.Member):
     view = CombatView(interaction.user, adversaire, p1_aniimo, p2_aniimo)
     await interaction.response.send_message(embed=embed, view=view)
 
-# Lancement sécurisé du bot via la variable d'environnement Render
+# Lancement sécurisé du bot via Render
 bot.run(os.getenv("DISCORD_TOKEN"))
