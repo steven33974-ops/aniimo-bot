@@ -27,27 +27,6 @@
     "niveau": "Nova Stage",
     "description": "Prédateur embrasé des régions volcaniques d'Idyll."
   },
-  "nimbi_base": {
-    "nom": "Nimbi",
-    "element": "Vent",
-    "role": "Support",
-    "niveau": "Base Form",
-    "description": "Créature aérienne discrète qui s'enroule dans les couches de nuages."
-  },
-  "nimbi_rainstorm": {
-    "nom": "Nimbi (Rainstorm)",
-    "element": "Eau/Vent",
-    "role": "Support",
-    "niveau": "Nova Stage",
-    "description": "Variante de tempête de pluie de Nimbi aux capacités de contrôle amplifiées."
-  },
-  "nimbi_cloudmist": {
-    "nom": "Nimbi (Cloudmist)",
-    "element": "Glace/Vent",
-    "role": "Support",
-    "niveau": "Nova Stage",
-    "description": "Variante brumeuse spécialisée dans l'absorption de dégâts."
-  },
   "celestis": {
     "nom": "Celestis",
     "element": "Dark",
@@ -62,32 +41,32 @@
     "niveau": "Nova Stage",
     "description": "Un DPS redoutable très populaire dans la meta du jeu."
   },
-  "pawney": {
-    "nom": "Pawney",
-    "element": "Dark",
-    "role": "DPS",
-    "niveau": "Nova Stage",
-    "description": "Combattant blindé infligeant des dégâts accrus aux cibles sous contrôle."
+  "hummin": {
+    "nom": "Hummin",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Petit oiseau des canopées qui virevolte pour soigner ses alliés."
   },
-  "ignitis": {
-    "nom": "Ignitis",
-    "element": "Dark",
-    "role": "DPS",
-    "niveau": "Nova Stage",
-    "description": "Assassin ténébreux spécialisé dans les frappes fulgurantes en embuscade."
+  "witchin": {
+    "nom": "Witchin",
+    "element": "Dark/Herbe",
+    "role": "Control",
+    "niveau": "Gamma Stage",
+    "description": "Manipule les plantes et les ombres pour entraver ses cibles."
   },
-  "susuta": {
-    "nom": "Susuta",
+  "tuckin": {
+    "nom": "Tuckin",
+    "element": "Herbe",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Se recroqueville dans un épais feuillage impénétrable."
+  },
+  "skippy": {
+    "nom": "Skippy",
     "element": "Eau",
-    "role": "BREAK",
-    "niveau": "Lumin Stage",
-    "description": "Spécialiste de la rupture de jauge, se branche vers de multiples évolutions."
-  },
-  "budclaw": {
-    "nom": "Budclaw",
-    "element": "Herbe/Roche",
-    "role": "BREAK",
-    "niveau": "Lumin Stage",
-    "description": "Défensif et spécialisé dans l'accumulation de Momentum."
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Rebondit partout en propulsant des jets d'eau agiles."
   }
 }
