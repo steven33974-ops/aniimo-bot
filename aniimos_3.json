@@ -1,65 +1,212 @@
 {
-  "solaris": {
-    "nom": "Solaris",
-    "element": "Feu/Cosmic",
+  "pyrothorn": {
+    "nom": "Pyrothorn",
+    "element": "Feu/Herbe",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un buisson ardent épineux qui repousse les assaillants avec des flammes de ronces."
+  },
+  "galebeak": {
+    "nom": "Galebeak",
+    "element": "Vent",
+    "role": "DPS",
+    "niveau": "Lumin Stage",
+    "description": "Rapide comme l'éclair, il fond sur ses proies en piqué."
+  },
+  "tempestor": {
+    "nom": "Tempestor",
+    "element": "Vent/Électrique",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Un être majestueux tirant sa puissance des supernovas lointaines."
+    "description": "Maître incontesté des cyclones électriques de haute altitude."
   },
-  "frostpaw": {
-    "nom": "Frostpaw",
-    "element": "Glace",
-    "role": "Tank",
-    "niveau": "Lumin Stage",
-    "description": "Un louveteau des neiges capable de geler le sol instantanément."
-  },
-  "teravolt": {
-    "nom": "Teravolt",
-    "element": "Électrique",
+  "mudkip_var": {
+    "nom": "Mudfin",
+    "element": "Eau/Terre",
     "role": "BREAK",
-    "niveau": "Nova Stage",
-    "description": "Une bête électrique survoltée qui pulvérise les défenses adverses."
+    "niveau": "Base Form",
+    "description": "Crée des remparts de boue solide pour protéger ses alliés."
   },
-  "floramour": {
-    "nom": "Floramour",
-    "element": "Herbe",
+  "geodoom": {
+    "nom": "Geodoom",
+    "element": "Roche/Feu",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Son poing rocheux en fusion réduit n'importe quel bouclier en poussière."
+  },
+  "crystallis": {
+    "nom": "Crystallis",
+    "element": "Glace/Lumière",
     "role": "Support",
     "niveau": "Gamma Stage",
-    "description": "Dispense des effluves apaisantes qui régénèrent l'équipe."
+    "description": "Réfracte la lumière à travers son corps cristallin pour aveugler ses rivaux."
   },
-  "shadowfang": {
-    "nom": "Shadowfang",
+  "venomtail": {
+    "nom": "Venomtail",
+    "element": "Venin",
+    "role": "Control",
+    "niveau": "Lumin Stage",
+    "description": "S'insinue dans les recoins sombres pour paralyser ses cibles par surprise."
+  },
+  "toxidra": {
+    "nom": "Toxidra",
+    "element": "Venin/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un dragon féroce dont le souffle corrompt le sol sur des kilomètres."
+  },
+  "spectro_unique": {
+    "nom": "Spectro",
+    "element": "Spectre",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Traverse les murs et jette des sorts d'effroi."
+  },
+  "phaeton": {
+    "nom": "Phaeton",
+    "element": "Spectre/Feu",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un destrier fantomatique enveloppé de flammes spectrales bleues."
+  },
+  "boulderpaw": {
+    "nom": "Boulderpaw",
+    "element": "Terre",
+    "role": "Tank",
+    "niveau": "Lumin Stage",
+    "description": "Ses pattes massives piétinent le sol pour déclencher de mini-séismes."
+  },
+  "terramox": {
+    "nom": "Terramox",
+    "element": "Terre",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un rempart vivant façonné dans la roche la plus pure."
+  },
+  "zephyrin": {
+    "nom": "Zephyrin",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Gamma Stage",
+    "description": "Apporte des brises revigorantes qui redonnent de l'énergie à l'équipe."
+  },
+  "aerodrake": {
+    "nom": "Aerodrake",
+    "element": "Vent/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Règne sans partage sur les courants aériens d'Idyll."
+  },
+  "lumikit": {
+    "nom": "Lumikit",
+    "element": "Lumière",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Diffuse une douce lueur réconfortante dans l'obscurité."
+  },
+  "solarnox": {
+    "nom": "Solarnox",
+    "element": "Lumière/Feu",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Canalise la chaleur d'un soleil ardent pour terrasser ses ennemis."
+  },
+  "lunaris": {
+    "nom": "Lunaris",
+    "element": "Dark/Psy",
+    "role": "Control",
+    "niveau": "Gamma Stage",
+    "description": "Manipule les illusions lunaires pour perturber l'esprit de ses adversaires."
+  },
+  "umbraval": {
+    "nom": "Umbraval",
     "element": "Dark",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Un chasseur nocturne invisible dans l'obscurité totale."
+    "description": "Une silhouette ténébreuse surgissant des reflets sombres."
   },
-  "rookey": {
-    "nom": "Rookey",
-    "element": "Roche/Acier",
+  "aquashell": {
+    "nom": "Aquashell",
+    "element": "Eau",
     "role": "Tank",
-    "niveau": "Base Form",
-    "description": "Une petite sentinelle blindée qui ne recule jamais."
-  },
-  "fennelun": {
-    "nom": "Fennelun",
-    "element": "Feu/Psy",
-    "role": "DPS",
     "niveau": "Lumin Stage",
-    "description": "Esprit rusé manipulant des flammes illusoires."
+    "description": "Se protège derrière un flux d'eau tourbillonnant impénétrable."
   },
-  "helion": {
-    "nom": "Helion",
+  "neptunox": {
+    "nom": "Neptunox",
+    "element": "Eau/Dragon",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Le gardien des profondeurs océaniques aux écailles d'acier."
+  },
+  "frostbite": {
+    "nom": "Frostbite",
+    "element": "Glace",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Glace instantanément l'air ambiant autour de ses petites pattes."
+  },
+  "glaciator": {
+    "nom": "Glaciator",
+    "element": "Glace/Acier",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un titan armé d'lames de glace tranchantes comme des rasoirs."
+  },
+  "sparklet": {
+    "nom": "Sparklet",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Sautille en émettant des étincelles de joie et d'électricité."
+  },
+  "voltarix": {
+    "nom": "Voltarix",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Foudroie ses cibles avec une précision chirurgicale."
+  },
+  "brambling": {
+    "nom": "Brambling",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Lumin Stage",
+    "description": "Se camoufle parfaitement dans les buissons de ronces sauvages."
+  },
+  "forestlord": {
+    "nom": "Forestlord",
+    "element": "Herbe",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un patriarche sylvestre protégeant la forêt des intrus."
+  },
+  "magmaling": {
+    "nom": "Magmaling",
+    "element": "Feu",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Une petite flaque incandescente qui grandit au contact du feu."
+  },
+  "infernoex": {
+    "nom": "Infernoex",
     "element": "Feu",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Incarnation solaire pure, ses attaques embrasent tout sur leur passage."
+    "description": "Brûle d'une rage inextinguible lors des affrontements majeurs."
   },
-  "malevsera": {
-    "nom": "Malevsera",
-    "element": "Dark/Venin",
-    "role": "DPS",
+  "psychat": {
+    "nom": "Psychat",
+    "element": "Psy",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Lévite gracieusement tout en analysant les faiblesses mentales."
+  },
+  "mewostic": {
+    "nom": "Mewostic",
+    "element": "Psy",
+    "role": "Control",
     "niveau": "Nova Stage",
-    "description": "Entité ténébreuse redoutée pour ses poisons mortels."
+    "description": "Projette des ondes psychiques capables de stopper un train en marche."
   }
 }
