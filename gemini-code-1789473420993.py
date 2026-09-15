@@ -5,20 +5,26 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-# --- FICHIERS DE DONNÉES ---
-ANIIMOS_FILE = "aniimos.json"
-ANIIMOS_FILE_2 = "aniimos_2.json"
+# --- FICHIERS DE DONNÉES (Intégration de tous les fichiers 1 à 6) ---
+FICHIERS_ANIIMOS = [
+    "aniimos.json", 
+    "aniimos_2.json", 
+    "aniimos_3.json", 
+    "aniimos_4.json", 
+    "aniimos_5.json", 
+    "aniimos_6.json"
+]
 INVENTORY_FILE = "inventaires.json"
 
-# Charger et fusionner les bases de données d'Aniimos
+# Charger et fusionner automatiquement tous les fichiers de données
 ANIIMOS_DATA = {}
-for file_path in [ANIIMOS_FILE, ANIIMOS_FILE_2]:
+for file_path in FICHIERS_ANIIMOS:
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             ANIIMOS_DATA.update(data)
     except FileNotFoundError:
-        pass
+        pass # Ignore si un fichier n'est pas encore créé
 
 def charger_inventaires():
     try:
@@ -135,6 +141,7 @@ async def on_ready():
     try:
         synced = await bot.tree.sync()
         print(f"Bot connecté en tant que {bot.user} ! Commandes synchronisées : {len(synced)}")
+        print(f"Nombre total d'Aniimos chargés : {len(ANIIMOS_DATA)}")
     except Exception as e:
         print(e)
 
@@ -146,7 +153,6 @@ async def on_message(message):
     channel_id = message.channel.id
     MESSAGE_COUNTERS[channel_id] = MESSAGE_COUNTERS.get(channel_id, 0) + 1
 
-    # Apparition tous les 10 messages
     if MESSAGE_COUNTERS[channel_id] >= 10:
         MESSAGE_COUNTERS[channel_id] = 0
 
