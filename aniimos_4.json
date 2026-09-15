@@ -1,37 +1,212 @@
 {
-  "pyroclaw": {
-    "nom": "Pyroclaw",
-    "element": "Feu",
-    "role": "DPS",
-    "niveau": "Base Form",
-    "description": "Un jeune combattant ardent dont les griffes chauffent au contact de l'air."
+  "ironjaw": {
+    "nom": "Ironjaw",
+    "element": "Acier",
+    "role": "Tank",
+    "niveau": "Lumin Stage",
+    "description": "Possède une mâchoire d'acier capable de broyer les métaux."
   },
-  "magmabeak": {
-    "nom": "Magmabeak",
-    "element": "Feu/Roche",
-    "role": "BREAK",
-    "niveau": "Gamma Stage",
-    "description": "Son bec durci brise la roche en fusion d'un seul coup sec."
-  },
-  "volcaraptor": {
-    "nom": "Volcaraptor",
-    "element": "Feu/Dragon",
-    "role": "DPS",
+  "titanium": {
+    "nom": "Titanium",
+    "element": "Acier",
+    "role": "Tank",
     "niveau": "Nova Stage",
-    "description": "Prédateur ultime des caldeiras, rapide et dévastateur."
+    "description": "Une armure ambulante impénétrable au design futuriste."
   },
-  "aquapup": {
-    "nom": "Aquapup",
+  "bubblette": {
+    "nom": "Bubblette",
     "element": "Eau",
     "role": "Support",
     "niveau": "Base Form",
-    "description": "Joueur et amical, il glisse sur les rapides avec une aisance déconcertante."
+    "description": "Envoie des bulles de savon curatives pour soigner ses alliés."
   },
-  "torrentis": {
-    "nom": "Torrentis",
+  "tsunamix": {
+    "nom": "Tsunamix",
     "element": "Eau",
     "role": "DPS",
     "niveau": "Nova Stage",
-    "description": "Canalise des trombes d'eau sous pression pour balayer ses opposants."
+    "description": "Déclenche des vagues massives capables de tout submerger."
+  },
+  "sandling": {
+    "nom": "Sandling",
+    "element": "Terre",
+    "role": "BREAK",
+    "niveau": "Base Form",
+    "description": "Se faufile et se cache instantanément sous les dunes de sable."
+  },
+  "dunescorps": {
+    "nom": "Dunescorps",
+    "element": "Terre/Insecte",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Un scorpion des sables blindé aux pinces redoutables."
+  },
+  "zephyrcub": {
+    "nom": "Zephyrcub",
+    "element": "Vent",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Un petit lion miniature porté par de légers courants d'air."
+  },
+  "tempest_lion": {
+    "nom": "Tempestlion",
+    "element": "Vent/Feu",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Rugit pour propulser des ondes de choc enflammées."
+  },
+  "glimmer": {
+    "nom": "Glimmer",
+    "element": "Lumière",
+    "role": "Support",
+    "niveau": "Lumin Stage",
+    "description": "Illumine les grottes les plus sombres grâce à sa queue phosphorescente."
+  },
+  "solaris_prime": {
+    "nom": "Solaris Prime",
+    "element": "Lumière/Cosmic",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "L'incarnation ultime de l'astre solaire d'Idyll."
+  },
+  "shriekling": {
+    "nom": "Shriekling",
+    "element": "Spectre",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Pousse des petits cris stridents qui désorientent ses proies."
+  },
+  "bansheor": {
+    "nom": "Bansheor",
+    "element": "Spectre/Dark",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Un esprit hurleur semant la panique dans les rangs adverses."
+  },
+  "cinder_fox": {
+    "nom": "Cinderfox",
+    "element": "Feu",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Laisse des empreintes incandescentes sur son passage."
+  },
+  "pyro_vixen": {
+    "nom": "Pyrovixen",
+    "element": "Feu/Psy",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Manipule le feu par la pensée avec une grâce mortelle."
+  },
+  "pebble_bird": {
+    "nom": "Pebblebird",
+    "element": "Roche",
+    "role": "BREAK",
+    "niveau": "Base Form",
+    "description": "Un oiseau au plumage de pierre qui ne peut pas voler très haut."
+  },
+  "gargoyal": {
+    "nom": "Gargoyal",
+    "element": "Roche/Spectre",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Semble inerte comme une statue avant de fondre sur ses ennemis."
+  },
+  "mossling": {
+    "nom": "Mossling",
+    "element": "Herbe",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Recouvert de mousse douce, il adore l'humidité des sous-bois."
+  },
+  "treantox": {
+    "nom": "Treantox",
+    "element": "Herbe/Venin",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Un arbre ancien distillant de la sève empoisonnée."
+  },
+  "spark_pup": {
+    "nom": "Sparkpup",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Remue la queue pour générer de petits chocs électriques inoffensifs."
+  },
+  "bolt_hound": {
+    "nom": "Bolthound",
+    "element": "Électrique",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Un canidé ultra-rapide capable de pourchasser l'électricité."
+  },
+  "frost_chick": {
+    "nom": "Frostchick",
+    "element": "Glace",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Claque du bec en créant de superbes flocons de neige."
+  },
+  "blizzard_king": {
+    "nom": "Blizzardking",
+    "element": "Glace/Vent",
+    "role": "Control",
+    "niveau": "Nova Stage",
+    "description": "Ordonne aux tempêtes de neige de geler tout le champ de bataille."
+  },
+  "venom_slug": {
+    "nom": "Venomslug",
+    "element": "Venin",
+    "role": "Control",
+    "niveau": "Base Form",
+    "description": "Laisse une traînée de bave corrosive derrière lui."
+  },
+  "acid_lord": {
+    "nom": "Acidlord",
+    "element": "Venin/Acier",
+    "role": "BREAK",
+    "niveau": "Nova Stage",
+    "description": "Dissout n'importe quel blindage en quelques secondes."
+  },
+  "cosmic_star": {
+    "nom": "Cosmicstar",
+    "element": "Cosmic",
+    "role": "Support",
+    "niveau": "Base Form",
+    "description": "Une petite étoile tombée du ciel qui brille d'un éclat apaisant."
+  },
+  "nebula_dragon": {
+    "nom": "Nebuladragon",
+    "element": "Cosmic/Dragon",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Son corps abrite des nébuleuses et des galaxies entières."
+  },
+  "iron_seed": {
+    "nom": "Ironseed",
+    "element": "Acier/Herbe",
+    "role": "Tank",
+    "niveau": "Base Form",
+    "description": "Une graine métallique impossible à croquer."
+  },
+  "steel_flora": {
+    "nom": "Steelflora",
+    "element": "Acier/Herbe",
+    "role": "Tank",
+    "niveau": "Nova Stage",
+    "description": "Une fleur géante aux pétales d'acier affûtés."
+  },
+  "shadow_bat": {
+    "nom": "Shadowbat",
+    "element": "Dark/Spectre",
+    "role": "DPS",
+    "niveau": "Base Form",
+    "description": "Utilise l'écholocation pour repérer ses proies dans le noir complet."
+  },
+  "vampirix": {
+    "nom": "Vampirix",
+    "element": "Dark/Spectre",
+    "role": "DPS",
+    "niveau": "Nova Stage",
+    "description": "Absorbe l'énergie vitale de ses opposants avec une aisance glaçante."
   }
 }
